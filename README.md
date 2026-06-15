@@ -1,6 +1,6 @@
 # AG Visuals — Photography & Videography Portfolio
 
-Personal portfolio website for **Alexandr Golub** — professional photographer and videographer based in Ottawa, Canada.
+Personal portfolio website for **Alexandr Golub** — professional photographer and videographer based in Niagara-on-the-Lake, Canada.
 
 🌐 **Live site:** [agvisuals.ca](https://agvisuals.ca)  
 📧 **Email:** agvisuals.ca@gmail.com
