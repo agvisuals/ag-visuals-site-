@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AG Visuals — Photography & Videography</title>
+  <meta name="description" content="AG Visuals — Every frame tells your story. Professional photography &amp; videography in Ottawa, Canada." />
+  <meta property="og:title" content="AG Visuals — Photography & Videography" />
+  <meta property="og:description" content="Портфолио фотографа и видеографа." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    /* ===== TOKENS ===== */
+    :root, [data-theme="light"] {
+      --color-bg:             #f5f4f0;
+      --color-surface:        #f8f7f4;
+      --color-surface-2:      #faf9f7;
+      --color-surface-offset: #eeece7;
+      --color-divider:        #ddd9d3;
+      --color-border:         #d0ccc5;
+      --color-text:           #1a1816;
+      --color-text-muted:     #706e68;
+      --color-text-faint:     #b0ada7;
+      --color-text-inverse:   #f8f7f4;
+      --color-primary:        #8a6f4e;
+      --color-primary-hover:  #6e5438;
+      --color-primary-active: #503c25;
+      --color-primary-highlight: #e8ddd0;
+      --color-accent:         #c9a87a;
+      --radius-sm: 0.25rem;
+      --radius-md: 0.5rem;
+      --radius-lg: 0.75rem;
+      --radius-xl: 1rem;
+      --radius-full: 9999px;
+      --shadow-sm: 0 1px 3px rgba(26,24,22,0.08);
+      --shadow-md: 0 4px 16px rgba(26,24,22,0.10);
+      --shadow-lg: 0 12px 40px rgba(26,24,22,0.14);
+      --transition-interactive: 200ms cubic-bezier(0.16, 1, 0.3, 1);
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-body: 'Inter', 'Helvetica Neue', sans-serif;
+      --text-xs:   clamp(0.75rem,  0.7rem  + 0.25vw, 0.875rem);
+      --text-sm:   clamp(0.875rem, 0.8rem  + 0.35vw, 1rem);
+      --text-base: clamp(1rem,     0.95rem + 0.25vw, 1.125rem);
+      --text-lg:   clamp(1.125rem, 1rem    + 0.75vw, 1.5rem);
+      --text-xl:   clamp(1.5rem,   1.2rem  + 1.25vw, 2.25rem);
+      --text-2xl:  clamp(2rem,     1.2rem  + 2.5vw,  3.5rem);
+      --text-3xl:  clamp(2.5rem,   1rem    + 4vw,    5rem);
+      --text-hero: clamp(3rem,     0.5rem  + 7vw,    8rem);
+      --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem;
+      --space-4: 1rem;    --space-5: 1.25rem; --space-6: 1.5rem;
+      --space-8: 2rem;    --space-10: 2.5rem; --space-12: 3rem;
+      --space-16: 4rem;   --space-20: 5rem;   --space-24: 6rem;
+      --content-narrow: 640px;
+      --content-default: 960px;
+      --content-wide: 1200px;
+    }
+
+    [data-theme="dark"] {
+      --color-bg:             #111009;
+      --color-surface:        #161410;
+      --color-surface-2:      #1b1914;
+      --color-surface-offset: #201e18;
+      --color-divider:        #2a2820;
+      --color-border:         #333028;
+      --color-text:           #e8e5df;
+      --color-text-muted:     #8a8780;
+      --color-text-faint:     #575450;
+      --color-text-inverse:   #1b1914;
+      --color-primary:        #c9a87a;
+      --color-primary-hover:  #dfc090;
+      --color-primary-active: #e8d0a8;
+      --color-primary-highlight: #2a2318;
+      --color-accent:         #8a6f4e;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.25);
+      --shadow-md: 0 4px 16px rgba(0,0,0,0.35);
+      --shadow-lg: 0 12px 40px rgba(0,0,0,0.5);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme]) {
+        --color-bg: #111009; --color-surface: #161410;
+        --color-surface-2: #1b1914; --color-surface-offset: #201e18;
+        --color-divider: #2a2820; --color-border: #333028;
+        --color-text: #e8e5df; --color-text-muted: #8a8780;
+        --color-text-faint: #575450; --color-text-inverse: #1b1914;
+        --color-primary: #c9a87a; --color-primary-hover: #dfc090;
+        --color-primary-active: #e8d0a8; --color-primary-highlight: #2a2318;
+        --color-accent: #8a6f4e;
+        --shadow-sm: 0 1px 3px rgba(0,0,0,0.25);
+        --shadow-md: 0 4px 16px rgba(0,0,0,0.35);
+        --shadow-lg: 0 12px 40px rgba(0,0,0,0.5);
+      }
+    }
+
+    /* ===== BASE ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html {
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+    }
+    body {
+      min-height: 100dvh;
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      color: var(--color-text);
+      background: var(--color-bg);
+      line-height: 1.65;
+    }
+    img, video { display: block; max-width: 100%; height: auto; }
+    ul[role="list"] { list-style: none; }
+    h1,h2,h3,h4 { font-family: var(--font-display); text-wrap: balance; line-height: 1.1; font-weight: 300; }
+    p { text-wrap: pretty; }
+    button { cursor: pointer; background: none; border: none; font: inherit; color: inherit; }
+    a { color: inherit; text-decoration: none; }
+    ::selection { background: oklch(from var(--color-primary) l c h / 0.2); }
+    :focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; border-radius: var(--radius-sm); }
+
+    a, button, [role="button"] {
+      transition: color var(--transition-interactive),
+                  background var(--transition-interactive),
+                  opacity var(--transition-interactive),
+                  box-shadow var(--transition-interactive);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+    }
+
+    /* ===== SCROLL REVEALS ===== */
+    .fade-in {
+      opacity: 1;
+    }
+    @supports (animation-timeline: scroll()) {
+      .fade-in {
+        opacity: 0;
+        animation: reveal-fade linear both;
+        animation-timeline: view();
+        animation-range: entry 0% entry 80%;
+      }
+    }
+    @keyframes reveal-fade { to { opacity: 1; } }
+
+    /* ===== LAYOUT ===== */
+    .container { max-width: var(--content-default); margin-inline: auto; padding-inline: var(--space-6); }
+    .container--wide { max-width: var(--content-wide); margin-inline: auto; padding-inline: var(--space-6); }
+
+    /* ===== SKIP LINK ===== */
+    .skip-link {
+      position: absolute; top: -100%; left: var(--space-4);
+      background: var(--color-primary); color: var(--color-text-inverse);
+      padding: var(--space-2) var(--space-4); border-radius: var(--radius-md);
+      font-size: var(--text-sm); z-index: 1000;
+      transition: top 0.2s;
+    }
+    .skip-link:focus { top: var(--space-4); }
+
+    /* ===== HEADER / NAV ===== */
+    .header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: var(--space-4) var(--space-6);
+      display: flex; align-items: center; justify-content: space-between;
+      background: color-mix(in oklch, var(--color-bg) 85%, transparent);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid oklch(from var(--color-text) l c h / 0.07);
+      transition: background var(--transition-interactive);
+    }
+    .header-logo {
+      display: flex; align-items: center; gap: var(--space-3);
+      font-family: var(--font-display); font-size: var(--text-lg);
+      letter-spacing: 0.03em; font-weight: 300;
+    }
+    .header-logo svg { width: 32px; height: 32px; flex-shrink: 0; }
+    .header-nav { display: flex; align-items: center; gap: var(--space-8); }
+    .header-nav a {
+      font-size: var(--text-sm); letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--color-text-muted);
+    }
+    .header-nav a:hover { color: var(--color-text); }
+    .header-actions { display: flex; align-items: center; gap: var(--space-4); }
+    .theme-toggle {
+      width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;
+      border-radius: var(--radius-full); color: var(--color-text-muted);
+    }
+    .theme-toggle:hover { color: var(--color-text); background: oklch(from var(--color-text) l c h / 0.07); }
+    .btn-contact {
+      padding: var(--space-2) var(--space-5);
+      background: var(--color-primary);
+      color: var(--color-text-inverse);
+      border-radius: var(--radius-full);
+      font-size: var(--text-sm);
+      letter-spacing: 0.05em;
+    }
+    .btn-contact:hover { background: var(--color-primary-hover); }
+    [data-theme="light"] .btn-contact { color: #fff; }
+
+    .nav-mobile-toggle {
+      display: none; width: 44px; height: 44px;
+      align-items: center; justify-content: center;
+      color: var(--color-text); border-radius: var(--radius-md);
+    }
+    .nav-mobile-toggle:hover { background: oklch(from var(--color-text) l c h / 0.07); }
+
+    @media (max-width: 768px) {
+      .header-nav { display: none; flex-direction: column; gap: var(--space-2);
+        position: fixed; top: 72px; left: 0; right: 0;
+        background: var(--color-surface); border-bottom: 1px solid var(--color-divider);
+        padding: var(--space-6); z-index: 99; }
+      .header-nav.open { display: flex; }
+      .header-nav a { font-size: var(--text-base); padding: var(--space-3) 0; }
+      .nav-mobile-toggle { display: flex; }
+      .btn-contact { display: none; }
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      min-height: 100dvh;
+      display: grid; place-items: center;
+      position: relative; overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0; z-index: 0;
+      background: var(--color-bg);
+    }
+    .hero-bg-img {
+      position: absolute; inset: 0; z-index: 0;
+      width: 100%; height: 100%; object-fit: cover;
+      opacity: 0.18;
+      filter: saturate(0.6);
+    }
+    [data-theme="dark"] .hero-bg-img { opacity: 0.30; }
+    .hero-bg-overlay {
+      position: absolute; inset: 0; z-index: 1;
+      background: linear-gradient(in oklch, var(--color-bg) 0%, transparent 40%, transparent 60%, var(--color-bg) 100%);
+    }
+    .hero-content {
+      position: relative; z-index: 2;
+      text-align: center;
+      padding: var(--space-12) var(--space-6);
+      max-width: 900px;
+    }
+    .hero-eyebrow {
+      display: inline-block;
+      font-size: var(--text-xs); letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--color-primary); margin-bottom: var(--space-6);
+    }
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: var(--text-hero);
+      font-weight: 300;
+      line-height: 1.0;
+      letter-spacing: -0.01em;
+      color: var(--color-text);
+      margin-bottom: var(--space-6);
+    }
+    .hero-title em { font-style: italic; color: var(--color-primary); }
+    .hero-sub {
+      font-size: var(--text-base); color: var(--color-text-muted);
+      max-width: 52ch; margin-inline: auto; margin-bottom: var(--space-10);
+      line-height: 1.7;
+    }
+    .hero-ctas { display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap; }
+    .btn-primary {
+      padding: var(--space-3) var(--space-8);
+      background: var(--color-primary);
+      color: #fff;
+      border-radius: var(--radius-full);
+      font-size: var(--text-sm); letter-spacing: 0.06em; text-transform: uppercase;
+      font-family: var(--font-body);
+    }
+    .btn-primary:hover { background: var(--color-primary-hover); box-shadow: var(--shadow-md); }
+    .btn-ghost {
+      padding: var(--space-3) var(--space-8);
+      border: 1px solid oklch(from var(--color-text) l c h / 0.25);
+      border-radius: var(--radius-full);
+      font-size: var(--text-sm); letter-spacing: 0.06em; text-transform: uppercase;
+      color: var(--color-text-muted);
+    }
+    .btn-ghost:hover { color: var(--color-text); border-color: var(--color-text-muted); }
+    .hero-scroll-hint {
+      position: absolute; bottom: var(--space-8); left: 50%; transform: translateX(-50%);
+      z-index: 2; display: flex; flex-direction: column; align-items: center; gap: var(--space-2);
+      color: var(--color-text-faint); font-size: var(--text-xs); letter-spacing: 0.1em; text-transform: uppercase;
+      animation: bounceY 2s ease-in-out infinite;
+    }
+    @keyframes bounceY { 0%,100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(6px); } }
+
+    /* ===== STATS BAR ===== */
+    .stats-bar {
+      background: var(--color-surface);
+      border-top: 1px solid var(--color-divider);
+      border-bottom: 1px solid var(--color-divider);
+      padding: var(--space-8) 0;
+    }
+    .stats-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 1px; background: var(--color-divider);
+    }
+    .stat {
+      background: var(--color-surface);
+      padding: var(--space-6) var(--space-8);
+      text-align: center;
+    }
+    .stat-number {
+      font-family: var(--font-display); font-size: var(--text-2xl); font-weight: 300;
+      color: var(--color-primary); line-height: 1; margin-bottom: var(--space-1);
+    }
+    .stat-label { font-size: var(--text-xs); letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-text-muted); }
+    @media (max-width: 600px) {
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    /* ===== SECTION HEADER ===== */
+    .section-header { margin-bottom: var(--space-12); }
+    .section-eyebrow {
+      display: inline-block; font-size: var(--text-xs); letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--color-primary); margin-bottom: var(--space-4);
+    }
+    .section-title {
+      font-family: var(--font-display); font-size: var(--text-2xl); font-weight: 300;
+      color: var(--color-text); line-height: 1.1;
+    }
+    .section-title em { font-style: italic; }
+    .section-subtitle { font-size: var(--text-base); color: var(--color-text-muted); max-width: 60ch; margin-top: var(--space-4); line-height: 1.7; }
+
+    /* ===== SERVICES ===== */
+    .services { padding: clamp(var(--space-16), 8vw, var(--space-24)) 0; }
+    .services-layout {
+      display: grid; grid-template-columns: 1fr 2fr;
+      gap: var(--space-16); align-items: start;
+    }
+    .services-sticky { position: sticky; top: 100px; }
+    .services-grid { display: grid; gap: var(--space-1); }
+    .service-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-divider);
+      border-radius: var(--radius-lg);
+      padding: var(--space-8);
+      display: grid; grid-template-columns: auto 1fr;
+      gap: var(--space-6); align-items: start;
+      transition: box-shadow var(--transition-interactive), border-color var(--transition-interactive);
+    }
+    .service-card:hover { box-shadow: var(--shadow-md); border-color: oklch(from var(--color-primary) l c h / 0.35); }
+    .service-number {
+      font-family: var(--font-display); font-size: var(--text-xl); font-weight: 300;
+      color: var(--color-primary); opacity: 0.5; line-height: 1; user-select: none;
+    }
+    .service-name {
+      font-family: var(--font-display); font-size: var(--text-lg); font-weight: 400;
+      margin-bottom: var(--space-2);
+    }
+    .service-desc { font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.7; }
+    @media (max-width: 768px) {
+      .services-layout { grid-template-columns: 1fr; }
+      .services-sticky { position: static; }
+    }
+
+    /* ===== PORTFOLIO ===== */
+    .portfolio { padding: clamp(var(--space-16), 8vw, var(--space-24)) 0; background: var(--color-surface); }
+    .portfolio-filters {
+      display: flex; gap: var(--space-2); margin-bottom: var(--space-10);
+      flex-wrap: wrap;
+    }
+    .filter-btn {
+      padding: var(--space-2) var(--space-5);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-full);
+      font-size: var(--text-xs); letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--color-text-muted);
+      transition: all var(--transition-interactive);
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background: var(--color-primary); color: #fff; border-color: var(--color-primary);
+    }
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: var(--space-3);
+    }
+    .portfolio-item {
+      position: relative; overflow: hidden; border-radius: var(--radius-lg);
+      cursor: pointer;
+    }
+    .portfolio-item:nth-child(1) { grid-column: span 8; grid-row: span 2; }
+    .portfolio-item:nth-child(2) { grid-column: span 4; }
+    .portfolio-item:nth-child(3) { grid-column: span 4; }
+    .portfolio-item:nth-child(4) { grid-column: span 4; }
+    .portfolio-item:nth-child(5) { grid-column: span 4; }
+    .portfolio-item:nth-child(6) { grid-column: span 4; }
+    .portfolio-item img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      min-height: 220px;
+    }
+    .portfolio-item:hover img { transform: scale(1.04); }
+    .portfolio-item-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(10,9,8,0.75) 0%, transparent 50%);
+      opacity: 0; transition: opacity var(--transition-interactive);
+      display: flex; align-items: flex-end; padding: var(--space-6);
+    }
+    .portfolio-item:hover .portfolio-item-overlay { opacity: 1; }
+    .portfolio-item-label {
+      color: #fff; font-family: var(--font-display); font-size: var(--text-lg); font-weight: 300;
+    }
+    .portfolio-item-cat { font-size: var(--text-xs); letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.6); display: block; margin-bottom: var(--space-1); }
+    @media (max-width: 768px) {
+      .portfolio-grid { grid-template-columns: 1fr 1fr; }
+      .portfolio-item:nth-child(n) { grid-column: span 1; grid-row: span 1; }
+      .portfolio-item:nth-child(1) { grid-column: span 2; }
+    }
+    @media (max-width: 480px) {
+      .portfolio-grid { grid-template-columns: 1fr; }
+      .portfolio-item:nth-child(n) { grid-column: span 1; }
+    }
+
+    /* ===== ABOUT ===== */
+    .about { padding: clamp(var(--space-16), 8vw, var(--space-24)) 0; }
+    .about-layout { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-16); align-items: center; }
+    .about-image-wrap { position: relative; }
+    .about-img {
+      width: 100%; aspect-ratio: 3/4; object-fit: cover;
+      border-radius: var(--radius-xl); box-shadow: var(--shadow-lg);
+    }
+    .about-accent-box {
+      position: absolute; bottom: -var(--space-6); right: -var(--space-6);
+      background: var(--color-primary);
+      padding: var(--space-6) var(--space-8);
+      border-radius: var(--radius-lg);
+      text-align: center;
+      box-shadow: var(--shadow-lg);
+    }
+    .about-accent-number {
+      font-family: var(--font-display); font-size: var(--text-2xl); color: #fff;
+      line-height: 1; margin-bottom: var(--space-1);
+    }
+    .about-accent-label { font-size: var(--text-xs); color: rgba(255,255,255,0.7); letter-spacing: 0.1em; text-transform: uppercase; }
+    .about-text p { color: var(--color-text-muted); line-height: 1.75; margin-bottom: var(--space-5); font-size: var(--text-base); }
+    .about-skills { display: flex; gap: var(--space-2); flex-wrap: wrap; margin-top: var(--space-8); }
+    .skill-tag {
+      padding: var(--space-1) var(--space-4);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-full);
+      font-size: var(--text-xs); letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--color-text-muted);
+    }
+    @media (max-width: 768px) {
+      .about-layout { grid-template-columns: 1fr; }
+      .about-accent-box { right: var(--space-4); bottom: var(--space-4); }
+    }
+
+    /* ===== PROCESS ===== */
+    .process { padding: clamp(var(--space-16), 8vw, var(--space-24)) 0; background: var(--color-surface); }
+    .process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-2); }
+    .process-step {
+      background: var(--color-surface-2);
+      border: 1px solid var(--color-divider);
+      border-radius: var(--radius-lg);
+      padding: var(--space-8) var(--space-6);
+      position: relative;
+    }
+    .step-num {
+      font-family: var(--font-display); font-size: var(--text-3xl); font-weight: 300;
+      color: var(--color-primary); opacity: 0.15; line-height: 1;
+      position: absolute; top: var(--space-4); right: var(--space-6);
+    }
+    .step-icon { color: var(--color-primary); margin-bottom: var(--space-4); }
+    .step-title { font-family: var(--font-display); font-size: var(--text-lg); font-weight: 400; margin-bottom: var(--space-3); }
+    .step-desc { font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.7; }
+    @media (max-width: 768px) {
+      .process-steps { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 480px) {
+      .process-steps { grid-template-columns: 1fr; }
+    }
+
+    /* ===== TESTIMONIALS ===== */
+    .testimonials { padding: clamp(var(--space-16), 8vw, var(--space-24)) 0; }
+    .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); }
+    .testimonial-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-divider);
+      border-radius: var(--radius-lg);
+      padding: var(--space-8);
+    }
+    .testimonial-stars { color: var(--color-primary); font-size: var(--text-base); margin-bottom: var(--space-4); letter-spacing: 2px; }
+    .testimonial-quote {
+      font-family: var(--font-display); font-size: var(--text-base); font-style: italic;
+      color: var(--color-text-muted); line-height: 1.7; margin-bottom: var(--space-6);
+    }
+    .testimonial-author { display: flex; gap: var(--space-3); align-items: center; }
+    .testimonial-avatar {
+      width: 40px; height: 40px; border-radius: var(--radius-full);
+      background: var(--color-primary-highlight);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-display); font-size: var(--text-base); color: var(--color-primary);
+      font-weight: 600; flex-shrink: 0;
+    }
+    .testimonial-name { font-size: var(--text-sm); font-weight: 500; }
+    .testimonial-role { font-size: var(--text-xs); color: var(--color-text-muted); }
+    @media (max-width: 768px) {
+      .testimonials-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ===== PRICING ===== */
+    .pricing { padding: clamp(var(--space-16), 8vw, var(--space-24)) 0; background: var(--color-surface); }
+    .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); }
+    .pricing-card {
+      background: var(--color-bg);
+      border: 1px solid var(--color-divider);
+      border-radius: var(--radius-xl);
+      padding: var(--space-10) var(--space-8);
+      position: relative; overflow: hidden;
+      transition: box-shadow var(--transition-interactive), transform var(--transition-interactive);
+    }
+    .pricing-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
+    .pricing-card.featured {
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 1px var(--color-primary), var(--shadow-md);
+    }
+    .pricing-badge {
+      position: absolute; top: var(--space-5); right: var(--space-5);
+      background: var(--color-primary); color: #fff;
+      padding: var(--space-1) var(--space-3);
+      border-radius: var(--radius-full);
+      font-size: var(--text-xs); letter-spacing: 0.08em; text-transform: uppercase;
+    }
+    .pricing-tier { font-size: var(--text-xs); letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-text-muted); margin-bottom: var(--space-4); }
+    .pricing-price {
+      font-family: var(--font-display); font-size: var(--text-2xl); font-weight: 300;
+      color: var(--color-text); line-height: 1; margin-bottom: var(--space-1);
+    }
+    .pricing-price span { font-size: var(--text-base); color: var(--color-text-muted); }
+    .pricing-desc { font-size: var(--text-sm); color: var(--color-text-muted); margin-bottom: var(--space-8); line-height: 1.6; }
+    .pricing-divider { height: 1px; background: var(--color-divider); margin-bottom: var(--space-8); }
+    .pricing-features { list-style: none; display: flex; flex-direction: column; gap: var(--space-3); margin-bottom: var(--space-8); }
+    .pricing-feature { display: flex; gap: var(--space-3); align-items: flex-start; font-size: var(--text-sm); color: var(--color-text-muted); }
+    .pricing-feature-check { color: var(--color-primary); flex-shrink: 0; margin-top: 2px; }
+    .btn-pricing {
+      display: block; width: 100%; text-align: center;
+      padding: var(--space-3) var(--space-6);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-full);
+      font-size: var(--text-sm); letter-spacing: 0.05em;
+      color: var(--color-text-muted);
+      transition: all var(--transition-interactive);
+    }
+    .btn-pricing:hover { border-color: var(--color-primary); color: var(--color-primary); }
+    .pricing-card.featured .btn-pricing {
+      background: var(--color-primary); border-color: var(--color-primary); color: #fff;
+    }
+    .pricing-card.featured .btn-pricing:hover { background: var(--color-primary-hover); }
+    @media (max-width: 900px) {
+      .pricing-grid { grid-template-columns: 1fr; max-width: 420px; margin-inline: auto; }
+    }
+
+    /* ===== CONTACT ===== */
+    .contact { padding: clamp(var(--space-16), 8vw, var(--space-24)) 0; }
+    .contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-16); align-items: start; }
+    .contact-info p { font-size: var(--text-base); color: var(--color-text-muted); line-height: 1.7; margin-bottom: var(--space-8); }
+    .contact-detail { display: flex; gap: var(--space-3); align-items: center; margin-bottom: var(--space-5); }
+    .contact-detail-icon { color: var(--color-primary); flex-shrink: 0; }
+    .contact-detail-text { font-size: var(--text-sm); color: var(--color-text-muted); }
+    .contact-detail-label { font-size: var(--text-xs); letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-text-faint); }
+    .contact-form { display: flex; flex-direction: column; gap: var(--space-4); }
+    .form-group { display: flex; flex-direction: column; gap: var(--space-2); }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); }
+    label { font-size: var(--text-xs); letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-text-muted); }
+    input, textarea, select {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: var(--space-3) var(--space-4);
+      font-size: var(--text-base);
+      color: var(--color-text);
+      font-family: var(--font-body);
+      width: 100%;
+      transition: border-color var(--transition-interactive), box-shadow var(--transition-interactive);
+    }
+    input:focus, textarea:focus, select:focus {
+      outline: none; border-color: var(--color-primary);
+      box-shadow: 0 0 0 3px oklch(from var(--color-primary) l c h / 0.15);
+    }
+    input::placeholder, textarea::placeholder { color: var(--color-text-faint); }
+    textarea { resize: vertical; min-height: 140px; }
+    .btn-submit {
+      padding: var(--space-4) var(--space-8);
+      background: var(--color-primary); color: #fff;
+      border-radius: var(--radius-full);
+      font-size: var(--text-sm); letter-spacing: 0.08em; text-transform: uppercase;
+      align-self: flex-start;
+      transition: background var(--transition-interactive), box-shadow var(--transition-interactive);
+    }
+    .btn-submit:hover { background: var(--color-primary-hover); box-shadow: var(--shadow-md); }
+    @media (max-width: 768px) {
+      .contact-layout { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: var(--color-surface);
+      border-top: 1px solid var(--color-divider);
+      padding: var(--space-12) 0 var(--space-8);
+    }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: var(--space-12); margin-bottom: var(--space-10); }
+    .footer-brand { }
+    .footer-logo { font-family: var(--font-display); font-size: var(--text-lg); margin-bottom: var(--space-4); display: flex; align-items: center; gap: var(--space-3); }
+    .footer-tagline { font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.7; max-width: 38ch; }
+    .footer-col h4 { font-size: var(--text-xs); letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-text-muted); margin-bottom: var(--space-5); font-family: var(--font-body); font-weight: 500; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: var(--space-3); }
+    .footer-links a { font-size: var(--text-sm); color: var(--color-text-muted); }
+    .footer-links a:hover { color: var(--color-text); }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: var(--space-8); border-top: 1px solid var(--color-divider); gap: var(--space-4); flex-wrap: wrap; }
+    .footer-copy { font-size: var(--text-xs); color: var(--color-text-faint); }
+    .social-links { display: flex; gap: var(--space-4); }
+    .social-link { color: var(--color-text-faint); transition: color var(--transition-interactive); }
+    .social-link:hover { color: var(--color-primary); }
+    @media (max-width: 768px) {
+      .footer-top { grid-template-columns: 1fr; gap: var(--space-8); }
+    }
+
+    /* ===== FULLSCREEN LIGHTBOX ===== */
+    .lightbox {
+      display: none; position: fixed; inset: 0; z-index: 200;
+      background: rgba(8,7,6,0.95); backdrop-filter: blur(4px);
+      align-items: center; justify-content: center;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox-img { max-width: 90vw; max-height: 85vh; object-fit: contain; border-radius: var(--radius-md); }
+    .lightbox-close {
+      position: absolute; top: var(--space-6); right: var(--space-6);
+      width: 44px; height: 44px; border-radius: var(--radius-full);
+      background: rgba(255,255,255,0.1);
+      color: #fff; display: flex; align-items: center; justify-content: center;
+      font-size: 20px;
+    }
+    .lightbox-close:hover { background: rgba(255,255,255,0.2); }
+  </style>
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Перейти к содержанию</a>
+
+  <!-- HEADER -->
+  <header class="header">
+    <a href="#" class="header-logo" aria-label="Главная">
+      <svg aria-label="AG Visuals logo" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+        <path d="M6 38 L16 10 L26 38" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M9.5 28 L22.5 28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <path d="M42 18 C38 13 30 13 30 23 C30 33 38 35 42 30 L42 24 L37 24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      AG Visuals
+    </a>
+
+    <nav class="header-nav" id="nav" role="navigation" aria-label="Основная навигация">
+      <a href="#services">Услуги</a>
+      <a href="#portfolio">Портфолио</a>
+      <a href="#about">Обо мне</a>
+      <a href="#pricing">Цены</a>
+      <a href="#contact">Контакт</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="theme-toggle" data-theme-toggle aria-label="Переключить тему" title="Переключить тему">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <a href="#contact" class="btn-contact">Связаться</a>
+      <button class="nav-mobile-toggle" aria-label="Меню" aria-expanded="false" id="menu-btn">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main id="main">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-bg">
+      <img src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/c220cf8e59deba65bde9cd3f4451c673bfa8c49e.jpg"
+           alt="" class="hero-bg-img" aria-hidden="true" width="1920" height="1080" loading="eager">
+      <div class="hero-bg-overlay" aria-hidden="true"></div>
+    </div>
+    <div class="hero-content">
+      <span class="hero-eyebrow">AG Visuals · Photographer &amp; Videographer</span>
+      <h1 class="hero-title" id="hero-title">
+        Каждый кадр —<br><em>это история</em>
+      </h1>
+      <p class="hero-sub">
+        Создаю образы, которые остаются. Свадьбы, портреты, коммерческие съёмки и аэровидео — каждый проект с душой.
+      </p>
+      <div class="hero-ctas">
+        <a href="#portfolio" class="btn-primary">Смотреть портфолио</a>
+        <a href="#contact" class="btn-ghost">Обсудить проект</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint" aria-hidden="true">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+      прокрутите
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats-bar" aria-label="Достижения">
+    <div class="container--wide">
+      <div class="stats-grid">
+        <div class="stat fade-in">
+          <div class="stat-number">8+</div>
+          <div class="stat-label">Лет опыта</div>
+        </div>
+        <div class="stat fade-in">
+          <div class="stat-number">340+</div>
+          <div class="stat-label">Завершённых проектов</div>
+        </div>
+        <div class="stat fade-in">
+          <div class="stat-number">120+</div>
+          <div class="stat-label">Свадебных съёмок</div>
+        </div>
+        <div class="stat fade-in">
+          <div class="stat-number">98%</div>
+          <div class="stat-label">Довольных клиентов</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services" aria-labelledby="services-title">
+    <div class="container--wide">
+      <div class="services-layout">
+        <div class="services-sticky">
+          <div class="section-header">
+            <span class="section-eyebrow">Что я делаю</span>
+            <h2 class="section-title" id="services-title">Услуги,<br><em>которые вдохновляют</em></h2>
+            <p class="section-subtitle">Профессиональная съёмка и постобработка для любого формата — от романтики до бизнеса.</p>
+          </div>
+          <a href="#contact" class="btn-primary" style="display:inline-block;">Оставить заявку</a>
+        </div>
+        <div class="services-grid">
+          <div class="service-card fade-in">
+            <div class="service-number">01</div>
+            <div>
+              <h3 class="service-name">Свадебная съёмка</h3>
+              <p class="service-desc">Полный день рядом с вами — от сборов до первого танца. Репортажный и постановочный стиль, натуральный свет и живые эмоции.</p>
+            </div>
+          </div>
+          <div class="service-card fade-in">
+            <div class="service-number">02</div>
+            <div>
+              <h3 class="service-name">Портретная фотосессия</h3>
+              <p class="service-desc">Студийные и выездные портреты для личного бренда, актёрского портфолио или семейного архива. Ретушь включена.</p>
+            </div>
+          </div>
+          <div class="service-card fade-in">
+            <div class="service-number">03</div>
+            <div>
+              <h3 class="service-name">Видеосъёмка & монтаж</h3>
+              <p class="service-desc">Свадебные фильмы, корпоративные ролики, имиджевые видео. Цветокоррекция в кинематографичном стиле, музыкальный монтаж.</p>
+            </div>
+          </div>
+          <div class="service-card fade-in">
+            <div class="service-number">04</div>
+            <div>
+              <h3 class="service-name">Аэросъёмка (дрон)</h3>
+              <p class="service-desc">Виды с высоты птичьего полёта для недвижимости, ивентов и кинопроизводства. Лицензированный пилот.</p>
+            </div>
+          </div>
+          <div class="service-card fade-in">
+            <div class="service-number">05</div>
+            <div>
+              <h3 class="service-name">Коммерческая фотография</h3>
+              <p class="service-desc">Предметная, продуктовая и рекламная съёмка для брендов, интернет-магазинов и маркетинговых материалов.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section class="portfolio" id="portfolio" aria-labelledby="portfolio-title">
+    <div class="container--wide">
+      <div class="section-header fade-in">
+        <span class="section-eyebrow">Избранные работы</span>
+        <h2 class="section-title" id="portfolio-title">Моё <em>портфолио</em></h2>
+      </div>
+      <div class="portfolio-filters" role="group" aria-label="Фильтр по категориям">
+        <button class="filter-btn active" data-filter="all">Все</button>
+        <button class="filter-btn" data-filter="wedding">Свадьбы</button>
+        <button class="filter-btn" data-filter="portrait">Портреты</button>
+        <button class="filter-btn" data-filter="aerial">Аэро</button>
+        <button class="filter-btn" data-filter="commercial">Коммерческая</button>
+      </div>
+      <div class="portfolio-grid">
+        <div class="portfolio-item" data-cat="aerial" tabindex="0" role="button" aria-label="Открыть: Ночной горизонт — аэросъёмка">
+          <img src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/24027cf0ec33fa0257c8c2d503279759165c2c21.jpg"
+               alt="Аэросъёмка ночного города с подсвеченными небоскрёбами" width="800" height="600" loading="lazy">
+          <div class="portfolio-item-overlay">
+            <div>
+              <span class="portfolio-item-cat">Аэросъёмка</span>
+              <div class="portfolio-item-label">Ночной горизонт</div>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-item" data-cat="wedding" tabindex="0" role="button" aria-label="Открыть: Золотой час — свадьба">
+          <img src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/99ed161007f23de04c95cf68e692139fc348b6e3.jpg"
+               alt="Пара молодожёнов в солнечном парке" width="600" height="400" loading="lazy">
+          <div class="portfolio-item-overlay">
+            <div>
+              <span class="portfolio-item-cat">Свадьба</span>
+              <div class="portfolio-item-label">Золотой час</div>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-item" data-cat="portrait" tabindex="0" role="button" aria-label="Открыть: Свет и тень — портрет">
+          <img src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/c82e88ad082d0b676cc3f86376713ec197b2722e.jpg"
+               alt="Студийный портрет женщины с драматическим освещением" width="600" height="400" loading="lazy">
+          <div class="portfolio-item-overlay">
+            <div>
+              <span class="portfolio-item-cat">Портрет</span>
+              <div class="portfolio-item-label">Свет и тень</div>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-item" data-cat="commercial" tabindex="0" role="button" aria-label="Открыть: Горный пейзаж — пейзажная съёмка">
+          <img src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/636b0544dc128a12580f7852fc968dee8f64a7d2.jpg"
+               alt="Dramatic mountain landscape with golden light" width="600" height="400" loading="lazy">
+          <div class="portfolio-item-overlay">
+            <div>
+              <span class="portfolio-item-cat">Пейзаж</span>
+              <div class="portfolio-item-label">Горный свет</div>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-item" data-cat="wedding" tabindex="0" role="button" aria-label="Открыть: На вершине мира — свадьба">
+          <img src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/93930a2bfee72f4ffdcec5b04c747363a02dbf4f.jpg"
+               alt="Пара молодожёнов на холме" width="600" height="400" loading="lazy">
+          <div class="portfolio-item-overlay">
+            <div>
+              <span class="portfolio-item-cat">Свадьба</span>
+              <div class="portfolio-item-label">На вершине мира</div>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-item" data-cat="portrait" tabindex="0" role="button" aria-label="Открыть: Краски студии — портрет">
+          <img src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/46c09133b96b0d37700df1bc916cb0e84962f29f.jpg"
+               alt="Студийный портрет с разноцветным светом" width="600" height="400" loading="lazy">
+          <div class="portfolio-item-overlay">
+            <div>
+              <span class="portfolio-item-cat">Портрет</span>
+              <div class="portfolio-item-label">Краски студии</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about" aria-labelledby="about-title">
+    <div class="container--wide">
+      <div class="about-layout">
+        <div class="about-image-wrap fade-in">
+          <img src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/3214f8786a995a81ccf784f15139a90d749d9539.jpg"
+               alt="Студийный портрет — демонстрация стиля работы" class="about-img"
+               width="600" height="800" loading="lazy">
+          <div class="about-accent-box">
+            <div class="about-accent-number">8+</div>
+            <div class="about-accent-label">Лет в деле</div>
+          </div>
+        </div>
+        <div class="about-text fade-in">
+          <div class="section-header">
+            <span class="section-eyebrow">Обо мне</span>
+            <h2 class="section-title" id="about-title">Фотография — это<br><em>взгляд на мир</em></h2>
+          </div>
+          <p>Меня зовут Александр. Я фотограф и видеограф с более чем восемью годами опыта в Канаде. Мой путь начался с фотожурналистики, а сегодня охватывает свадебную, портретную, коммерческую съёмку и аэрофотографию.</p>
+          <p>Я верю, что лучшие снимки рождаются не из сложного света и дорогого оборудования, а из умения слышать людей и чувствовать момент. Каждый проект — это сотрудничество, в котором ваша история становится моим искусством.</p>
+          <p>Профессиональный пилот дрона, сертифицированный Transport Canada. Работаю по всей Канаде и выезжаю за рубеж.</p>
+          <div class="about-skills" role="list" aria-label="Навыки">
+            <span class="skill-tag" role="listitem">Adobe Lightroom</span>
+            <span class="skill-tag" role="listitem">Adobe Premiere Pro</span>
+            <span class="skill-tag" role="listitem">DaVinci Resolve</span>
+            <span class="skill-tag" role="listitem">Sony & Canon</span>
+            <span class="skill-tag" role="listitem">DJI Drone</span>
+            <span class="skill-tag" role="listitem">Color Grading</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process" id="process" aria-labelledby="process-title">
+    <div class="container--wide">
+      <div class="section-header fade-in" style="text-align:center; max-width: 600px; margin-inline: auto; margin-bottom: var(--space-12);">
+        <span class="section-eyebrow">Как мы работаем</span>
+        <h2 class="section-title" id="process-title">Процесс от идеи<br><em>до результата</em></h2>
+      </div>
+      <div class="process-steps">
+        <div class="process-step fade-in">
+          <span class="step-num" aria-hidden="true">01</span>
+          <div class="step-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h3 class="step-title">Консультация</h3>
+          <p class="step-desc">Обсуждаем ваш проект, идеи, ожидания и дату. Полностью бесплатно и без обязательств.</p>
+        </div>
+        <div class="process-step fade-in">
+          <span class="step-num" aria-hidden="true">02</span>
+          <div class="step-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <h3 class="step-title">Бронирование</h3>
+          <p class="step-desc">Подписываем договор, вносите предоплату 30%, дата закреплена. Готовим детальный план съёмки.</p>
+        </div>
+        <div class="process-step fade-in">
+          <span class="step-num" aria-hidden="true">03</span>
+          <div class="step-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M20.2 20.2c2.04-2.03.02-7.36-4.5-11.9C11.16 3.77 5.83 1.75 3.8 3.8c-2.04 2.04-.02 7.37 4.5 11.9 4.53 4.53 9.86 6.55 11.9 4.5z"/><path d="M15.7 15.7c4.52-4.53 6.54-9.86 4.5-11.9-2.04-2.04-7.37-.02-11.9 4.5"/></svg>
+          </div>
+          <h3 class="step-title">Съёмка</h3>
+          <p class="step-desc">Я прихожу полностью подготовленным, работаю профессионально и создаю атмосферу, в которой вы расслабляетесь перед камерой.</p>
+        </div>
+        <div class="process-step fade-in">
+          <span class="step-num" aria-hidden="true">04</span>
+          <div class="step-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="8 17 12 21 16 17"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.88 18.09A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.29"/></svg>
+          </div>
+          <h3 class="step-title">Доставка</h3>
+          <p class="step-desc">Обработанные фото и смонтированное видео через онлайн-галерею в срок до 4 недель. Высокое разрешение, навсегда ваши.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials" id="testimonials" aria-labelledby="testimonials-title">
+    <div class="container--wide">
+      <div class="section-header fade-in" style="text-align:center; max-width: 600px; margin-inline: auto; margin-bottom: var(--space-12);">
+        <span class="section-eyebrow">Отзывы</span>
+        <h2 class="section-title" id="testimonials-title">Что говорят<br><em>мои клиенты</em></h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card fade-in">
+          <div class="testimonial-stars" aria-label="5 звёзд">★★★★★</div>
+          <p class="testimonial-quote">«Александр поймал каждый момент нашей свадьбы так, как мы даже не могли мечтать. Смотрим фотографии снова и снова — это магия.»</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" aria-hidden="true">АМ</div>
+            <div>
+              <div class="testimonial-name">Анна и Максим</div>
+              <div class="testimonial-role">Свадьба, Ниагара-он-зе-Лейк</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card fade-in">
+          <div class="testimonial-stars" aria-label="5 звёзд">★★★★★</div>
+          <p class="testimonial-quote">«Корпоративный ролик, снятый Александром, превзошёл все ожидания. Команда был профессиональна, результат — на голову выше других предложений.»</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" aria-hidden="true">ДК</div>
+            <div>
+              <div class="testimonial-name">Дмитрий Краснов</div>
+              <div class="testimonial-role">Директор маркетинга, TechNova</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card fade-in">
+          <div class="testimonial-stars" aria-label="5 звёзд">★★★★★</div>
+          <p class="testimonial-quote">«Портретная сессия прошла невероятно комфортно. Я никогда не любила фотографироваться — но теперь это мои любимые снимки за всю жизнь.»</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" aria-hidden="true">СВ</div>
+            <div>
+              <div class="testimonial-name">София Волкова</div>
+              <div class="testimonial-role">Портретная съёмка, Торонто</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing" id="pricing" aria-labelledby="pricing-title">
+    <div class="container--wide">
+      <div class="section-header fade-in" style="text-align:center; max-width: 600px; margin-inline: auto; margin-bottom: var(--space-12);">
+        <span class="section-eyebrow">Стоимость</span>
+        <h2 class="section-title" id="pricing-title">Прозрачные<br><em>цены</em></h2>
+        <p class="section-subtitle" style="margin-inline: auto; text-align: center;">Индивидуальные пакеты под ваш проект. Все цены указаны в CAD.</p>
+      </div>
+      <div class="pricing-grid">
+        <div class="pricing-card fade-in">
+          <div class="pricing-tier">Портрет</div>
+          <div class="pricing-price">$299 <span>/ сессия</span></div>
+          <p class="pricing-desc">Идеально для личного бренда, LinkedIn или семейного архива.</p>
+          <div class="pricing-divider"></div>
+          <ul class="pricing-features" role="list">
+            <li class="pricing-feature">
+              <svg class="pricing-feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              До 2 часов съёмки
+            </li>
+            <li class="pricing-feature">
+              <svg class="pricing-feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              30 обработанных фото
+            </li>
+            <li class="pricing-feature">
+              <svg class="pricing-feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Онлайн-галерея
+            </li>
+            <li class="pricing-feature">
+              <svg class="pricing-feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Сдача в течение 2 недель
+            </li>
+          </ul>
+          <a href="#contact" class="btn-pricing">Выбрать пакет</a>
+        </div>
+        <div class="pricing-card featured fade-in" aria-label="Самый популярный пакет">
+          <div class="pricing-badge">Популярный</div>
+          <div class="pricing-tier">Свадьба</div>
+          <div class="pricing-price">$1,800 <span>/ день</span></div>
+          <p class="pricing-desc">Полное сопровождение вашего особого дня — фото и видео.</p>
+          <div class="pricing-divider"></div>
+          <ul class="pricing-features" role="list">
+            <li class="pricing-feature">
+              <svg class="pricing-feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              8 часов съёмки
+            </li>
+            <li class="pricing-feature">
+              <svg class="pricing-feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              400+ обработанных фото
+            </li>
+            <li class="pricing-feature">
+              <svg class="pricing-feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Свадебный фильм (5–7 мин)
+            </li>
+            <li class="pricing-feature">
+              <svg class="pricing-feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Аэросъёмка дроном
+            </li>
+            <li class="pricing-feature">
+              <svg class="pricing-feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Онлайн-галерея + USB-диск
+            </li>
+          </ul>
+          <a href="#contact" class="btn-pricing">Выбрать пакет</a>
+        </div>
+        <div class="pricing-card fade-in">
+          <div class="pricing-tier">Коммерческий</div>
+          <div class="pricing-price">По запросу</div>
+          <p class="pricing-desc">Корпоративные ролики, рекламные кампании, брендинговые проекты.</p>
+          <div class="pricing-divider"></div>
+          <ul class="pricing-features" role="list">
+            <li class="pricing-feature">
+              <svg class="pricing-feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Индивидуальный бриф
+            </li>
+            <li class="pricing-feature">
+              <svg class="pricing-feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Несколько локаций
+            </li>
+            <li class="pricing-feature">
+              <svg class="pricing-feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Многокамерная съёмка
+            </li>
+            <li class="pricing-feature">
+              <svg class="pricing-feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Коммерческая лицензия
+            </li>
+          </ul>
+          <a href="#contact" class="btn-pricing">Обсудить проект</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact" aria-labelledby="contact-title">
+    <div class="container--wide">
+      <div class="contact-layout">
+        <div class="contact-info fade-in">
+          <div class="section-header">
+            <span class="section-eyebrow">Свяжитесь</span>
+            <h2 class="section-title" id="contact-title">Давайте создадим<br><em>что-то особенное</em></h2>
+          </div>
+          <p>Расскажите мне о вашем проекте. Я отвечаю в течение 24 часов и с удовольствием проведу бесплатную консультацию, чтобы узнать, как могу вам помочь.</p>
+          <div class="contact-detail">
+            <svg class="contact-detail-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <div>
+              <div class="contact-detail-label">Email</div>
+              <a href="mailto:agvisuals.ca@gmail.com" class="contact-detail-text">agvisuals.ca@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <svg class="contact-detail-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.5 12c-.87-2.56-1.34-5.24-1.36-7.94A2 2 0 0 1 5.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L9.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 23 16.92z"/></svg>
+            <div>
+              <div class="contact-detail-label">Телефон / WhatsApp</div>
+              <a href="tel:+14165550123" class="contact-detail-text">+1 (416) 555-0123</a>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <svg class="contact-detail-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div>
+              <div class="contact-detail-label">Локация</div>
+              <div class="contact-detail-text">Ottawa, Ontario · Across Canada</div>
+            </div>
+          </div>
+        </div>
+        <div class="fade-in">
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">Имя</label>
+                <input type="text" id="fname" name="fname" placeholder="Ваше имя" autocomplete="given-name" required>
+              </div>
+              <div class="form-group">
+                <label for="femail">Email</label>
+                <input type="email" id="femail" name="femail" placeholder="email@example.com" autocomplete="email" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="fservice">Тип проекта</label>
+              <select id="fservice" name="fservice">
+                <option value="">— Выберите —</option>
+                <option>Свадебная съёмка</option>
+                <option>Портретная сессия</option>
+                <option>Видеосъёмка & монтаж</option>
+                <option>Аэросъёмка</option>
+                <option>Коммерческая фотография</option>
+                <option>Другое</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="fmsg">Расскажите о проекте</label>
+              <textarea id="fmsg" name="fmsg" placeholder="Дата, место, детали — чем больше, тем лучше…"></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Отправить сообщение →</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container--wide">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <svg aria-hidden="true" viewBox="0 0 48 48" fill="none" width="28" height="28">
+              <path d="M6 38 L16 10 L26 38" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M9.5 28 L22.5 28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M42 18 C38 13 30 13 30 23 C30 33 38 35 42 30 L42 24 L37 24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            AG Visuals
+          </div>
+          <p class="footer-tagline">AG Visuals — профессиональная фото- и видеосъёмка в Канаде. Свадьбы, портреты, аэро, коммерческие проекты.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Навигация</h4>
+          <ul class="footer-links" role="list">
+            <li><a href="#services">Услуги</a></li>
+            <li><a href="#portfolio">Портфолио</a></li>
+            <li><a href="#about">Обо мне</a></li>
+            <li><a href="#pricing">Цены</a></li>
+            <li><a href="#contact">Контакт</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Услуги</h4>
+          <ul class="footer-links" role="list">
+            <li><a href="#services">Свадебная съёмка</a></li>
+            <li><a href="#services">Портреты</a></li>
+            <li><a href="#services">Видеосъёмка</a></li>
+            <li><a href="#services">Аэросъёмка</a></li>
+            <li><a href="#services">Коммерческая</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 AG Visuals. All rights reserved.</p>
+        <div class="social-links" aria-label="Социальные сети">
+          <a href="#" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-1.96C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.4 19.54C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  </main>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Просмотр изображения">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Закрыть">✕</button>
+    <img src="" alt="" class="lightbox-img" id="lightbox-img" width="1200" height="800" loading="lazy">
+  </div>
+
+  <script>
+    // Theme toggle
+    (function(){
+      const t = document.querySelector('[data-theme-toggle]');
+      const r = document.documentElement;
+      let d = r.getAttribute('data-theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      r.setAttribute('data-theme', d);
+      function updateIcon() {
+        if (!t) return;
+        t.setAttribute('aria-label', 'Переключить на ' + (d === 'dark' ? 'светлую' : 'тёмную') + ' тему');
+        t.innerHTML = d === 'dark'
+          ? '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>'
+          : '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+      }
+      updateIcon();
+      if (t) t.addEventListener('click', () => {
+        d = d === 'dark' ? 'light' : 'dark';
+        r.setAttribute('data-theme', d);
+        updateIcon();
+      });
+    })();
+
+    // Mobile nav
+    const menuBtn = document.getElementById('menu-btn');
+    const nav = document.getElementById('nav');
+    menuBtn.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', open);
+    });
+    nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      nav.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    }));
+
+    // Portfolio filters
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        document.querySelectorAll('.portfolio-item').forEach(item => {
+          if (filter === 'all' || item.dataset.cat === filter) {
+            item.style.display = '';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Lightbox
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxClose = document.getElementById('lightbox-close');
+    document.querySelectorAll('.portfolio-item').forEach(item => {
+      function open() {
+        const img = item.querySelector('img');
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.classList.add('open');
+        lightboxClose.focus();
+      }
+      item.addEventListener('click', open);
+      item.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } });
+    });
+    function closeLightbox() { lightbox.classList.remove('open'); }
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+    // Contact form
+    document.getElementById('contact-form').addEventListener('submit', e => {
+      e.preventDefault();
+      const btn = e.target.querySelector('.btn-submit');
+      btn.textContent = '✓ Сообщение отправлено!';
+      btn.style.background = 'var(--color-success, #437a22)';
+      setTimeout(() => { btn.textContent = 'Отправить сообщение →'; btn.style.background = ''; }, 4000);
+    });
+  </script>
+</body>
+</html>
